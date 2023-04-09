@@ -1,0 +1,86 @@
+:root {
+    --aqua: #66fcf1;
+    --blue-grey: #1f2833;
+    --dark-aqua: #45a29e;
+    --dark-blue: #0b0c10;
+    --grey: #c5c6c7;
+    --light-grey: #ececec;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--grey);
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+}
+
+.home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 36px;
+    margin-top: -1.5em;
+    max-width: 100%;
+}
+
+.aqua {
+    color: var(--aqua);
+}
+
+.dark-aqua {
+    color: var(--dark-aqua);
+}
+
+#bio {
+    font-size: 36px;
+}
+
+a {
+    color: var(--aqua);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark-aqua);
+}
+
+a:active {
+    color: var(--grey);
+}
+
+a:visited {
+    color: var(--blue-grey);
+}
+
+h1 {
+    font-family: "Space Mono", monospace;
+    font-size: 150px;
+    font-weight: 700;
+    color: var(--aqua);
+    line-height: 1;
+}
+
+h2 {
+    font-size: 90px;
+    line-height: 0.2;
+    margin-bottom: -0.5em;
+}
+
+h3 {
+    font-size: 56px;
+    color: var(--aqua);
+    margin-left: 1em;
+}
+
+p {
+    font-size: 30px;
+    max-width: 80%;
+    margin: 3em auto;
+}
