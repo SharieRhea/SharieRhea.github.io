@@ -7,12 +7,18 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
+    />
+    <link rel="icon" href="images/favicon.png" />
     <title>Sharie Rhea</title>
   </head>
   <body>
     <div class="topnav" id="topnav">
-      <a href="#home" class="active">Home</a>
+      <a href="#top" class="active">Home</a>
       <a href="#about">About</a>
+      <a href="#projects">Projects</a>
       <a href="javascript:void(0);" class="icon" onclick="iconClick()"
         ><i class="fi fi-sr-bars-sort"></i
       ></a>
@@ -67,6 +73,25 @@
         tinkering with new skills, working on passion projects, creating art,
         reading fantasty novels, and watching other people play video games.
       </p>
+    </div>
+
+    <div id="projects" class="projects">
+      <h3>Projects</h3>
+      <div id="rhythmbox" class="project-card">
+        <div class="project-header">
+          <h4>Rhythmbox - Current Song</h4>
+          <i class="fi fi-brands-python language-icon"></i>
+        </div>
+        <div class="project-content">
+          <p class="project-desc">
+            An easy to understand Python script that pulls the currently playing
+            song from Rhythmbox-the native music player for Linux. The song
+            title and artist are written to a file for easy use during streams
+            or other content creation.
+          </p>
+          <img src="images/rhythmbox.png" class="project-logo" />
+        </div>
+      </div>
     </div>
     <script src="on_scroll.js"></script>
   </body>

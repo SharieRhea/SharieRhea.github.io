@@ -44,6 +44,10 @@ body {
   background-color: var(--dark-blue);
 }
 
+.topnav a:visited {
+  color: var(--dark-blue);
+}
+
 .topnav a.active {
   background-color: var(--aqua);
 }
@@ -62,6 +66,28 @@ body {
   font-size: 36px;
   margin-top: -1.5em;
   max-width: 90%;
+}
+
+.project-card {
+  margin: 0 auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 30px;
+  border: 1px solid var(--grey);
+  margin-bottom: 5rem;
+  background: linear-gradient(90deg, var(--dark-blue), var(--blue-grey));
+  box-shadow: 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .aqua {
@@ -115,13 +141,42 @@ h3 {
   margin-left: 1em;
 }
 
+h4 {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  font-size: 36px;
+  color: var(--dark-aqua);
+  margin-bottom: 0;
+}
+
 p {
   font-size: 30px;
   max-width: 80%;
   margin: 3em auto;
 }
 
-@media screen and (max-width: 600px) {
+.project-desc {
+  font-size: 24px;
+  max-width: 50%;
+  margin: 0.5em 1rem 1em 2em;
+  text-align: left;
+}
+
+.project-logo {
+  max-height: 20rem;
+  width: auto;
+  margin: 1em;
+  overflow: hidden;
+}
+
+.language-icon {
+  color: var(--grey);
+  margin: 1em 1em 0em 1em;
+  padding-bottom: 0;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 800px) {
   .topnav a:not(:first-child) {
     display: none;
   }
