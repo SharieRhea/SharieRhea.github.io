@@ -18,6 +18,11 @@ body {
   margin: 0;
 }
 
+body {
+  background-image: url(/images/GlowingLines.png);
+  background-attachment: fixed;
+}
+
 .topnav {
   background-color: var(--blue-grey);
   position: fixed;
@@ -174,6 +179,34 @@ p {
   margin: 1em 1em 0em 1em;
   padding-bottom: 0;
   font-size: 2em;
+}
+
+.social-icon {
+  font-size: 3em;
+}
+
+.socials {
+  display: flex;
+  margin: 0 auto;
+  max-width: 50%;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.socials a {
+  color: var(--grey);
+}
+
+.socials a:hover {
+  color: var(--aqua);
+}
+
+.socials a:active {
+  color: var(--dark-aqua);
+}
+
+.socials a:visited {
+  color: var(--blue-grey);
 }
 
 @media screen and (max-width: 400px) {
