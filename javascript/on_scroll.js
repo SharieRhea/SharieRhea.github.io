@@ -6,7 +6,7 @@ window.onscroll = function() {
         console.log("scroll up");
     }
     else {
-        document.getElementById("topnav").style.top = "-150px";
+        document.getElementById("topnav").style.top = "-250px";
         console.log("scroll down");
     }
     prevScrollPosition = currentScrollPosition;

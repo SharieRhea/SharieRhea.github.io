@@ -23,7 +23,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  transition: top 0.3s;
+  transition: top 0.3s ease;
 }
 
 .topnav a {
@@ -204,7 +204,7 @@ p {
   color: var(--blue-grey);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   body {
     font-size: 10px;
   }
