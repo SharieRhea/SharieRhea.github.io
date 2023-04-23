@@ -18,11 +18,6 @@ body {
   margin: 0;
 }
 
-body {
-  background-image: url(/images/GlowingLines.png);
-  background-attachment: fixed;
-}
-
 .topnav {
   background-color: var(--blue-grey);
   position: fixed;
