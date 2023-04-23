@@ -32,7 +32,7 @@ body {
   color: var(--dark-blue);
   text-align: center;
   padding: 0.75rem 2rem;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .topnav a:hover:first-child {
@@ -63,7 +63,7 @@ body {
 
 .subtitle {
   font-style: italic;
-  font-size: 36px;
+  font-size: 2.25em;
   margin-top: -1.5em;
   max-width: 90%;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 #bio {
-  font-size: 36px;
+  font-size: 2.25em;
 }
 
 a {
@@ -121,14 +121,14 @@ a:visited {
 
 h1 {
   font-family: "Space Mono", monospace;
-  font-size: 150px;
+  font-size: 9.375em;
   font-weight: 700;
   color: var(--aqua);
   line-height: 1;
 }
 
 h2 {
-  font-size: 90px;
+  font-size: 5.625em;
   line-height: 0.2;
   margin-top: 2em;
   margin-bottom: -0.5em;
@@ -136,7 +136,7 @@ h2 {
 }
 
 h3 {
-  font-size: 56px;
+  font-size: 3.5em;
   color: var(--aqua);
   margin-left: 1em;
 }
@@ -144,19 +144,19 @@ h3 {
 h4 {
   margin-top: 1rem;
   padding-left: 1.5rem;
-  font-size: 36px;
+  font-size: 2.25em;
   color: var(--dark-aqua);
   margin-bottom: 0;
 }
 
 p {
-  font-size: 30px;
+  font-size: 1.875em;
   max-width: 80%;
   margin: 3em auto;
 }
 
 .project-desc {
-  font-size: 24px;
+  font-size: 1.5em;
   max-width: 50%;
   margin: 0.5em 1rem 1em 2em;
   text-align: left;
@@ -205,6 +205,10 @@ p {
 }
 
 @media screen and (max-width: 400px) {
+  body {
+    font-size: 10px;
+  }
+
   .topnav a:not(:first-child) {
     display: none;
   }
