@@ -4,7 +4,7 @@
 :root {
   --aqua: #66fcf1;
   --blue-grey: #1f2833;
-  --dark-aqua: #45a29e;
+  --dark-aqua: #34b0ac;
   --dark-blue: #0b0c10;
   --grey: #c5c6c7;
   --light-grey: #ececec;
@@ -29,14 +29,15 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: var(--dark-blue);
+  color: var(--dark-aqua);
   text-align: center;
   padding: 0.75rem 2rem;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .topnav a:hover:first-child {
-  color: var(--dark-aqua);
+  background-color: var(--aqua);
+  color: var(--dark-blue);
 }
 
 .topnav a:hover {
@@ -44,12 +45,9 @@ body {
   background-color: var(--dark-blue);
 }
 
-.topnav a:visited {
-  color: var(--dark-blue);
-}
-
 .topnav a.active {
-  background-color: var(--aqua);
+  background-color: var(--dark-aqua);
+  color: var(--dark-blue);
 }
 
 .topnav .icon {
@@ -115,10 +113,6 @@ a:active {
   color: var(--grey);
 }
 
-a:visited {
-  color: var(--blue-grey);
-}
-
 h1 {
   font-family: "Space Mono", monospace;
   font-size: 9.375em;
@@ -142,11 +136,16 @@ h3 {
 }
 
 h4 {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
   font-size: 2.25em;
   color: var(--dark-aqua);
-  margin-bottom: 0;
+  margin-left: 2em;
+  margin-bottom: -2em;
+}
+
+.project-header h4 {
+  margin: 1em 0 0 1em;
+  font-size: 2.25em;
+  color: var(--dark-aqua);
 }
 
 p {
@@ -156,8 +155,8 @@ p {
 }
 
 .project-desc {
-  font-size: 1.5em;
-  max-width: 50%;
+  font-size: 2em;
+  max-width: 65%;
   margin: 0.5em 1rem 1em 2em;
   text-align: left;
 }
@@ -177,36 +176,47 @@ p {
 }
 
 .social-icon {
-  font-size: 3em;
+  font-size: 8em;
 }
 
-.socials {
+.social {
   display: flex;
   margin: 0 auto;
-  max-width: 50%;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  max-width: 90%;
 }
 
-.socials a {
-  color: var(--grey);
+.social p {
+  max-width: 50%;
 }
 
-.socials a:hover {
-  color: var(--aqua);
-}
-
-.socials a:active {
-  color: var(--dark-aqua);
-}
-
-.socials a:visited {
-  color: var(--blue-grey);
+.social a {
+  margin: auto auto;
 }
 
 @media screen and (max-width: 450px) {
   body {
     font-size: 10px;
+  }
+
+  .project-content {
+    flex-direction: column-reverse;
+  }
+
+  .project-desc {
+    max-width: 90%;
+  }
+
+  .project-header h4 {
+    margin: 1em;
+  }
+
+  .project-logo {
+    max-height: 15rem;
+  }
+
+  .language-icon {
+    margin: auto 1em;
   }
 
   .topnav a:not(:first-child) {
@@ -237,4 +247,5 @@ p {
     display: block;
     text-align: left;
   }
+
 }
