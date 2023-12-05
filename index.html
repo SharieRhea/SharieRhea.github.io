@@ -4,22 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
-    />
     <link rel="icon" href="images/favicon.png" />
     <title>Sharie Rhea</title>
   </head>
   <body>
-    <video autoplay loop muted class="plexus">
-      <source src="videos/Plexus.apng" type="video/apng" />
-    </video>
-
     <div class="topnav" id="topnav">
       <a href="#top" class="active">Home</a>
       <a href="#about">About</a>
@@ -68,7 +56,7 @@
         of maintaining hobbies that I enjoyed.
       </p>
       <p>
-        Currently, I am studying computer science in Univerisity with an
+        Currently, I am studying computer science in University with an
         expected graduation date of <span class="dark-aqua">Fall 2024</span>. I
         work as a lab assistant and peer teacher for Intro to CS. Additionally,
         I am a student in the
@@ -77,7 +65,7 @@
         >
         program with the Department of Defense. In my spare time I love
         tinkering with new skills, working on passion projects, creating art,
-        reading fantasty novels, and watching other people play video games.
+        reading fantasy novels, and watching other people play video games.
       </p>
     </div>
 
@@ -86,12 +74,12 @@
       <div id="shariebot" class="project-card">
         <div class="project-header">
           <h4><a href="https://github.com/SharieRhea/SharieBot" target="_blank">SharieBot</a></h4>
-          <i class="fi fi-brands-java language-icon"></i>
+          <p class="languages-list">Java, SQL</p>
         </div>
         <div class="project-content">
           <p class="project-desc">
             A feature-rich custom chatbot for Twitch built using Java, SQLite, and
-            the Twitch4J library. Includes interactive chat commands, automatic
+            the <a href="https://twitch4j.github.io/">Twitch4J library</a>. Includes interactive chat commands, automatic
             event responses, and persistent data for user statistics.
           </p>
           <img
@@ -104,6 +92,7 @@
       <div id="nyEats" class="project-card">
         <div class="project-header">
           <h4><a href="https://github.com/SharieRhea/NY-Eats" target="_blank">NY Eats</a></h4>
+          <p class="languages-list">Kotlin</p>
         </div>
         <div class="project-content">
           <p class="project-desc">
@@ -122,7 +111,7 @@
       <div id="tic-tac-toe" class="project-card">
         <div class="project-header">
           <h4><a href="https://github.com/SharieRhea/ticTacToe" target="_blank">Tic-Tac-Toe</a></h4>
-          <i class="fi fi-brands-python language-icon"></i>
+          <p class="languages-list">Python</p>
         </div>
         <div class="project-content">
           <p class="project-desc">
@@ -133,18 +122,18 @@
           <img
             src="images/ticTacToeIcon.png"
             class="project-logo"
-            alt="A tic-tac-toe board with some tiles filled."
+            alt="A pixel art tic-tac-toe board with some tiles filled."
           />
         </div>
       </div>
       <div id="rhythmbox" class="project-card">
         <div class="project-header">
           <h4><a href="https://github.com/SharieRhea/Rhythmbox" target="_blank">Rhythmbox- Current Song</a></h4>
-          <i class="fi fi-brands-python language-icon"></i>
+          <p class="languages-list">Python</p>
         </div>
         <div class="project-content">
           <p class="project-desc">
-            An easy to understand Python script that pulls the currently playing
+            An easy-to-understand Python script that pulls the currently playing
             song from Rhythmbox-the native music player for Linux. The song
             title and artist are written to a file for easy use during streams
             or other content creation.
@@ -159,17 +148,18 @@
       <div id="indigo-ice" class="project-card">
         <div class="project-header">
           <h4><a href="https://github.com/SharieRhea/Indigo_Ice" target="_blank">Indigo Ice</a></h4>
+          <p class="languages-list"></p>
         </div>
         <div class="project-content">
           <p class="project-desc">
             A saturated blue and purple theme for Visual Studio Code. Originally
             created for personal use, but thought it would be fun to turn into a
-            public extension! Over 250 downloads from the VSC marketplace.
+            public extension! Over 300 downloads from the VSC marketplace.
           </p>
           <img
             src="images/indigoIceIcon.png"
             class="project-logo"
-            alt="A grey and yellow speaker that is the logo for the Rhythmbox program."
+            alt="A blue, purple, and green snowflake on a circular dark indigo background."
           />
         </div>
       </div>
@@ -177,26 +167,23 @@
 
     <div id="contact" class="contact">
       <h3>Where can I find you?</h3>
-      <h4>Github</h4>
+      <h4><a href="https://github.com/SharieRhea">Github</a></h4>
       <div class="social">
         <p>Check out the repositories for all my projects and other work.</p>
-        <a href="https://github.com/SharieRhea" target="_blank" class
-          ><i class="fi fi-brands-github social-icon"></i
-        ></a>
       </div>
-      <h4>LinkedIn</h4>
+      <h4><a href="https://www.linkedin.com/in/sharierhea">LinkedIn</a></h4>
       <div class="social">
         <p>
           View my LinkedIn profile to learn about my work experience, education,
           and skills in more detail.
         </p>
-        <a href="https://www.linkedin.com/in/sharierhea" target="_blank"
-          ><i class="fi fi-brands-linkedin social-icon"></i
-        ></a>
       </div>
       <h4>Email</h4>
-        <p>If you'd like, feel free to reach out through my email: <span class="aqua">sharierhea@gmail.com</span></p>
+      <div class="social">
+        <p>If you'd like, feel free to reach out through my email: <span class="aqua">sharierhea@gmail.com</span>.</p>
+      </div>
     </div>
+    <br />
     <script src="javascript/on_scroll.js"></script>
   </body>
 </html>
