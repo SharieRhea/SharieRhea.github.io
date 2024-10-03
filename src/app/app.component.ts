@@ -1,21 +1,16 @@
 import { Component } from '@angular/core';
-import { SocialLinkButton } from './outlined-button.component';
+import { RouterOutlet } from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SocialLinkButton],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
-    <div id="social-links">
-      <social-link-button label="GitHub" link="https://github.com/SharieRhea"/>
-      <social-link-button label="LinkedIn" link="https://www.linkedin.com/in/sharierhea"/>
-    </div>
+    <router-outlet></router-outlet>
   `,
   styles: `
-    #social-links {
-      display: flex;
-      gap: 0.5rem;
-    }
   `
 })
 export class AppComponent {

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'social-link-button',
+  selector: 'social-link-button-component',
   standalone: true,
   imports: [CommonModule, ButtonModule],
   template: `
@@ -18,7 +18,7 @@ import { ButtonModule } from 'primeng/button';
     }
   `
 })
-export class SocialLinkButton {
+export class SocialLinkButtonComponent {
   @Input() label = "";
   @Input() link = "";
 }
