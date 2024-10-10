@@ -1,21 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Space Mono");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-body {
+* {
   font-family: Poppins, sans-serif;
+}
+
+body {
   background: linear-gradient(var(--gray-900), var(--gray-800)) fixed;
 }
 
 h1 {
   font-family: "Space Mono", monospace;
-  font-size: 10rem;
+  font-size: 8rem;
   color: var(--primary-color);
-  line-height: 1;
   margin: 0;
 }
 
 h2 {
   font-size: 5rem;
+  margin-bottom: 0;
 }
 
 .subtitle {

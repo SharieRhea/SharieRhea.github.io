@@ -22,6 +22,10 @@ import { MenuItem } from "primeng/api";
       width: 100%;
     }
 
+    :host ::ng-deep .p-menubar {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+
     #icon {
       padding-right: .5rem;
       font-size: .75rem;

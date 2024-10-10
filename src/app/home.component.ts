@@ -5,11 +5,12 @@ import { RouterLinkActive } from '@angular/router';
 import { SocialLinkButtonComponent } from './social-link-button.component';
 import { ButtonModule } from 'primeng/button';
 import { NavigationBarComponent } from './navigation-bar.component';
+import { ProjectShowcaseComponent } from './project-showcase.component';
 
 @Component({
   selector: 'home-component',
   standalone: true,
-  imports: [SocialLinkButtonComponent, RouterOutlet, RouterLink, RouterLinkActive, ButtonModule, NavigationBarComponent],
+  imports: [SocialLinkButtonComponent, RouterOutlet, RouterLink, RouterLinkActive, ButtonModule, NavigationBarComponent, ProjectShowcaseComponent],
   template: `
     <navigation-bar-component/>
     <h2>Hi there, I'm</h2>
@@ -18,14 +19,19 @@ import { NavigationBarComponent } from './navigation-bar.component';
     <div id="social-links">
       <social-link-button-component label="GitHub" link="https://github.com/SharieRhea"/>
       <social-link-button-component label="LinkedIn" link="https://www.linkedin.com/in/sharierhea"/>
-      <a class="p-button" routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">Projects</a>
     </div>
+    <project-showcase-component />
   `,
   styles: `
     :host {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    navigation-bar-component {
+      position: sticky;
+      top: 8px;
     }
 
     #social-links {
