@@ -4,12 +4,14 @@ import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import { SocialLinkButtonComponent } from './social-link-button.component';
 import { ButtonModule } from 'primeng/button';
+import { NavigationBarComponent } from './navigation-bar.component';
 
 @Component({
   selector: 'home-component',
   standalone: true,
-  imports: [SocialLinkButtonComponent, RouterOutlet, RouterLink, RouterLinkActive, ButtonModule],
+  imports: [SocialLinkButtonComponent, RouterOutlet, RouterLink, RouterLinkActive, ButtonModule, NavigationBarComponent],
   template: `
+    <navigation-bar-component/>
     <h2>Hi there, I'm</h2>
     <h1>SHARIE RHEA</h1>
     <p class="subtitle">A computer science student, driven learner, and jack-of-all-trades.</p>
