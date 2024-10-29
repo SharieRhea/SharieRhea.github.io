@@ -24,6 +24,9 @@ import { MenuItem } from "primeng/api";
 
     :host ::ng-deep .p-menubar {
       background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #424b57; // TODO: possibly make this dynamic based on theme
     }
 
     #icon {

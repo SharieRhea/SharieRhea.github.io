@@ -31,7 +31,12 @@ import { ProjectShowcaseComponent } from './project-showcase.component';
 
     navigation-bar-component {
       position: sticky;
-      top: 8px;
+      top: 0;
+      z-index: 1;
+    }
+
+    project-showcase-component {
+      width: 80%;
     }
 
     #social-links {
