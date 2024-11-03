@@ -8,6 +8,7 @@ import { ChipModule } from 'primeng/chip';
   standalone: true,
   imports: [CommonModule, ProjectLinkButtonComponent, ChipModule],
   template: `
+    <!-- TODO: switch to semantic html or completely refactor -->
     <div class="showcase-container">
     <img src="images/test-image.jpg" alt="" class="fade-out"/>
       <div class="content-container">

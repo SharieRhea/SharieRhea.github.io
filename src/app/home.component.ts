@@ -9,21 +9,43 @@ import { ButtonModule } from 'primeng/button';
 import { NavigationBarComponent } from './navigation-bar.component';
 import { ProjectShowcaseComponent } from './project-showcase.component';
 import { Device } from './device.enum';
+import { SocialIconLinkButtonComponent as SocialIconLinkButtonComponent } from "./social-icon-link-button.component";
 
 @Component({
   selector: 'home-component',
   standalone: true,
-  imports: [CommonModule, SocialLinkButtonComponent, RouterOutlet, RouterLink, RouterLinkActive, ButtonModule, NavigationBarComponent, ProjectShowcaseComponent],
+  imports: [
+    CommonModule,
+    SocialLinkButtonComponent,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    ButtonModule,
+    NavigationBarComponent,
+    ProjectShowcaseComponent,
+    SocialLinkButtonComponent,
+    SocialIconLinkButtonComponent
+  ],
   template: `
-    <navigation-bar-component/>
-    <h2 [ngClass]="device">Hi there, I'm</h2>
-    <h1 [ngClass]="device">SHARIE RHEA</h1>
+    <nav>
+      <navigation-bar-component/>
+    </nav>
+    <header>
+      <h2 [ngClass]="device">Hi there, I'm</h2>
+      <h1 [ngClass]="device">SHARIE RHEA</h1>
+    </header>
     <p class="subtitle" *ngIf="device == deviceEnum.Default">A computer science student, driven learner, and jack-of-all-trades.</p>
-    <div id="social-links" *ngIf="device == deviceEnum.Default">
-      <social-link-button-component label="GitHub" link="https://github.com/SharieRhea"/>
-      <social-link-button-component label="LinkedIn" link="https://www.linkedin.com/in/sharierhea"/>
-    </div>
-    <project-showcase-component *ngIf="device == deviceEnum.Default"/>
+    <section id="social-links" >
+      <social-link-button-component *ngIf="device == deviceEnum.Default else mobile" label="GitHub" link="https://github.com/SharieRhea"/>
+      <social-link-button-component *ngIf="device == deviceEnum.Default" label="LinkedIn" link="https://www.linkedin.com/in/sharierhea"/>
+      <ng-template #mobile>
+        <social-icon-link-button-component icon="pi pi-github" link="https://github.com/SharieRhea"/>
+        <social-icon-link-button-component icon="pi pi-linkedin" link="https://www.linkedin.com/in/sharierhea"/>
+      </ng-template>
+    </section>
+    <main>
+      <project-showcase-component *ngIf="device == deviceEnum.Default"/>
+    </main>
   `,
   styles: `
     :host {
@@ -32,19 +54,19 @@ import { Device } from './device.enum';
       align-items: center;
     }
 
-    navigation-bar-component {
-      position: sticky;
-      top: 0;
-      z-index: 1;
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    project-showcase-component {
+    main {
       width: 80%;
     }
 
     #social-links {
       display: flex;
-      gap: 0.5rem;
+      gap: 1rem;
     }
   `
 })
