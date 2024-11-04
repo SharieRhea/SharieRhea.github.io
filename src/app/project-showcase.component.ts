@@ -29,7 +29,6 @@ import { ChipModule } from 'primeng/chip';
   styles: `
     :host {
       margin: 2rem;
-      border: 1px solid blue;
     }
 
     .showcase-container {

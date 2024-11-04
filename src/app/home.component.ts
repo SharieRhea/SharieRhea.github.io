@@ -10,6 +10,7 @@ import { NavigationBarComponent } from './navigation-bar.component';
 import { ProjectShowcaseComponent } from './project-showcase.component';
 import { Device } from './device.enum';
 import { SocialIconLinkButtonComponent as SocialIconLinkButtonComponent } from "./social-icon-link-button.component";
+import { ProjectCardComponent } from "./project-card.component";
 
 @Component({
   selector: 'home-component',
@@ -24,8 +25,9 @@ import { SocialIconLinkButtonComponent as SocialIconLinkButtonComponent } from "
     NavigationBarComponent,
     ProjectShowcaseComponent,
     SocialLinkButtonComponent,
-    SocialIconLinkButtonComponent
-  ],
+    SocialIconLinkButtonComponent,
+    ProjectCardComponent
+],
   template: `
     <nav>
       <navigation-bar-component/>
@@ -36,15 +38,18 @@ import { SocialIconLinkButtonComponent as SocialIconLinkButtonComponent } from "
     </header>
     <p class="subtitle" *ngIf="device == deviceEnum.Default">A computer science student, driven learner, and jack-of-all-trades.</p>
     <section id="social-links" >
-      <social-link-button-component *ngIf="device == deviceEnum.Default else mobile" label="GitHub" link="https://github.com/SharieRhea"/>
+      <social-link-button-component *ngIf="device == deviceEnum.Default else mobileSocialsLinks" label="GitHub" link="https://github.com/SharieRhea"/>
       <social-link-button-component *ngIf="device == deviceEnum.Default" label="LinkedIn" link="https://www.linkedin.com/in/sharierhea"/>
-      <ng-template #mobile>
+      <ng-template #mobileSocialsLinks>
         <social-icon-link-button-component icon="pi pi-github" link="https://github.com/SharieRhea"/>
         <social-icon-link-button-component icon="pi pi-linkedin" link="https://www.linkedin.com/in/sharierhea"/>
       </ng-template>
     </section>
     <main>
-      <project-showcase-component *ngIf="device == deviceEnum.Default"/>
+      <project-showcase-component *ngIf="device == deviceEnum.Default else mobileProjectCards"/>
+      <ng-template #mobileProjectCards>
+        <project-card-component title="Track Tagger" link="https://github.com/SharieRhea/TrackTagger"/>
+      </ng-template>
     </main>
   `,
   styles: `
