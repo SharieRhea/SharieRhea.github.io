@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
 import { ProjectLinkButtonComponent } from './project-link-button.component';
-import { ChipModule } from 'primeng/chip';
 
 @Component({
   selector: 'project-showcase-component',
   standalone: true,
-  imports: [CommonModule, ProjectLinkButtonComponent, ChipModule],
+  imports: [CommonModule, ProjectLinkButtonComponent, ButtonModule],
   template: `
-    <!-- TODO: switch to semantic html or completely refactor -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <div class="showcase-container">
     <img src="images/test-image.jpg" alt="" class="fade-out"/>
       <div class="content-container">
@@ -22,7 +22,12 @@ import { ChipModule } from 'primeng/chip';
             <li>highly customizable with options for manually entering fields</li>
           </ul>
         </div>
-        <p-chip label="Test" icon="pi pi-apple" />
+       <section class="technologies">
+        <p-button [raised]="true" [text]="true" [rounded]="true">
+          <i class="devicon-python-plain"></i>
+        </p-button>
+        <p-button icon="pi pi-book" [raised]="true" [text]="true" [rounded]="true"/>
+      </section>
       </div>
     </div>
   `,
@@ -51,6 +56,26 @@ import { ChipModule } from 'primeng/chip';
       mask-image: linear-gradient(270deg, rgba(0,0,0,1), rgba(0,0,0,.4), rgba(0,0,0,0));
       max-width: 100%;
     }
+
+    .technologies {
+      display: flex;
+      gap: 1rem;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+
+    ::ng-deep .technologies .p-button {
+      height: 4rem;
+      width: 4rem;
+      padding: 25%;
+    }
+
+    ::ng-deep .pi {
+      font-size: 2rem;
+    }
+
   `
 })
 export class ProjectShowcaseComponent {}

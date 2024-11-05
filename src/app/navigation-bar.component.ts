@@ -17,12 +17,8 @@ import { MenuItem } from "primeng/api";
     </p-menubar>
   `,
   styles: `
-    :host {
-      backdrop-filter: blur(8px);
-      width: 100%;
-    }
-
     :host ::ng-deep .p-menubar {
+      backdrop-filter: blur(8px);
       background-color: rgba(0, 0, 0, 0.25);
       border-radius: 0;
       border: none;

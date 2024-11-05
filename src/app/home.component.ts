@@ -59,6 +59,10 @@ import { ProjectCardComponent } from "./project-card.component";
       align-items: center;
     }
 
+    nav {
+      z-index: 100;
+    }
+
     header {
       display: flex;
       flex-direction: column;

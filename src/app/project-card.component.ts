@@ -50,10 +50,16 @@ import { Input } from '@angular/core';
     }
 
     i {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
-    ::ng-deep .pi {
+    ::ng-deep .technologies .p-button {
+      height: 3rem;
+      width: 3rem;
+      padding: 25%;
+    }
+
+    ::ng-deep .technologies .pi {
       font-size: 1.5rem;
     }
   `
