@@ -11,6 +11,7 @@ import { ProjectShowcaseComponent } from './project-showcase.component';
 import { Device } from './device.enum';
 import { SocialIconLinkButtonComponent as SocialIconLinkButtonComponent } from "./social-icon-link-button.component";
 import { ProjectCardComponent } from "./project-card.component";
+import { projects } from './project.class';
 
 @Component({
   selector: 'home-component',
@@ -46,9 +47,9 @@ import { ProjectCardComponent } from "./project-card.component";
       </ng-template>
     </section>
     <main>
-      <project-showcase-component *ngIf="device == deviceEnum.Default else mobileProjectCards"/>
+      <project-showcase-component *ngIf="device == deviceEnum.Default else mobileProjectCards" [project]="projects[0]"/>
       <ng-template #mobileProjectCards>
-        <project-card-component title="Track Tagger" link="https://github.com/SharieRhea/TrackTagger"/>
+          <project-card-component *ngFor="let project of projects" [project]="project"/>
       </ng-template>
     </main>
   `,
@@ -82,6 +83,7 @@ import { ProjectCardComponent } from "./project-card.component";
 export class HomeComponent implements OnInit {
   deviceEnum = Device;
   device = Device.Default;
+  projects = projects;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 

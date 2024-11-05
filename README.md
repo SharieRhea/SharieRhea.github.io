@@ -1,4 +1,4 @@
-# SharierheaDev
+# sharierhea.dev 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
 
@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## TODO
+
+[ ] allow clicking on a project card to lead to the project's showcase page
+
+[ ] resize project title on mobile to be smaller
+[ ] fix text vertical alignment on project link buttons
+
+[ ] add project cards to desktop view, 2 side-by-side

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { ProjectLinkButtonComponent } from './project-link-button.component';
+import { Project } from './project.class';
 
 @Component({
   selector: 'project-showcase-component',
@@ -9,38 +10,41 @@ import { ProjectLinkButtonComponent } from './project-link-button.component';
   imports: [CommonModule, ProjectLinkButtonComponent, ButtonModule],
   template: `
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <div class="showcase-container">
+    <section id="showcase-container">
     <img src="images/test-image.jpg" alt="" class="fade-out"/>
-      <div class="content-container">
-        <project-link-button-component label="Track Tagger" link="https://github.com/SharieRhea/TrackTagger" icon="pi pi-github"/>
-        <div>
-          <p>A graphical application for editing .mp3 metadata.</p>
-          <p> Last.fm is queried using an API key to provide automatic fetching of tags, album title and artist, and album cover.</p>
+      <section id="content-container">
+        <project-link-button-component [label]="project.title" [link]="project.link" icon="pi pi-github"/>
+        <section>
+          <p>{{ project.subtitle }}</p>
+          <p>{{ project.description }}</p>
           <ul>
-            <li>graphical user interface (GUI) using the customtkinter library</li>
-            <li>interacts with last.fm to query track information using their REST API</li>
-            <li>highly customizable with options for manually entering fields</li>
+            <li *ngFor="let bullet of project.bullets">
+              {{bullet}}
+            </li>
           </ul>
-        </div>
-       <section class="technologies">
-        <p-button [raised]="true" [text]="true" [rounded]="true">
-          <i class="devicon-python-plain"></i>
+        </section>
+       <section id="technologies">
+        <p-button *ngFor="let icon of project.technologies" [raised]="true" [text]="true" [rounded]="true">
+          <i [class]="icon"></i>
         </p-button>
-        <p-button icon="pi pi-book" [raised]="true" [text]="true" [rounded]="true"/>
       </section>
-      </div>
-    </div>
+      </section>
+    </section>
   `,
   styles: `
     :host {
       margin: 2rem;
     }
 
-    .showcase-container {
+    ul {
+      padding-left: 1rem;
+    }
+
+    #showcase-container {
       position: relative;
     }
 
-    .content-container {
+    #content-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -57,7 +61,7 @@ import { ProjectLinkButtonComponent } from './project-link-button.component';
       max-width: 100%;
     }
 
-    .technologies {
+    #technologies {
       display: flex;
       gap: 1rem;
     }
@@ -66,7 +70,7 @@ import { ProjectLinkButtonComponent } from './project-link-button.component';
       font-size: 2rem;
     }
 
-    ::ng-deep .technologies .p-button {
+    ::ng-deep #technologies .p-button {
       height: 4rem;
       width: 4rem;
       padding: 25%;
@@ -78,4 +82,6 @@ import { ProjectLinkButtonComponent } from './project-link-button.component';
 
   `
 })
-export class ProjectShowcaseComponent {}
+export class ProjectShowcaseComponent {
+  @Input() project: Project = new Project("", "", "", "", [], [])
+}

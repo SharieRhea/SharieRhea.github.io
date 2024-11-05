@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectLinkButtonComponent } from './project-link-button.component';
 import { ButtonModule } from 'primeng/button';
 import { Input } from '@angular/core';
+import { Project } from './project.class';
 
 @Component({
   selector: 'project-card-component',
@@ -10,22 +11,21 @@ import { Input } from '@angular/core';
   imports: [CommonModule, ProjectLinkButtonComponent, ButtonModule],
   template: `
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <section class="container">
-      <project-link-button-component [label]="title" [link]="link" icon="pi pi-github"/>
-      <section class="description">
-        <p>A graphical application for editing .mp3 metadata.</p>
-        <p> Last.fm is queried using an API key to provide automatic fetching of tags, album title and artist, and album cover.</p>
+    <section id="container">
+      <project-link-button-component [label]="project.title" [link]="project.link" icon="pi pi-github"/>
+      <section id="description">
+        <p>{{ project.subtitle }}</p>
+        <p>{{ project.description }}</p>
         <ul>
-          <li>graphical user interface (GUI) using the customtkinter library</li>
-          <li>interacts with last.fm to query track information using their REST API</li>
-          <li>highly customizable with options for manually entering fields</li>
+          <li *ngFor="let bullet of project.bullets">
+            {{bullet}}
+          </li>
         </ul>
       </section>
-      <section class="technologies">
-        <p-button [raised]="true" [text]="true" [rounded]="true">
-          <i class="devicon-python-plain"></i>
+      <section id="technologies">
+        <p-button *ngFor="let icon of project.technologies" [raised]="true" [text]="true" [rounded]="true">
+          <i [class]="icon"></i>
         </p-button>
-        <p-button icon="pi pi-book" [raised]="true" [text]="true" [rounded]="true"/>
       </section>
     </section>
   `,
@@ -34,7 +34,11 @@ import { Input } from '@angular/core';
       margin: 2rem;
     }
 
-    .container {
+    ul {
+      padding-left: 1rem;
+    }
+
+    #container {
       background: linear-gradient(140deg, rgb(21, 39, 70) 0%, rgb(42, 60, 96) 100%);
       max-width: 100%;
       padding: 1rem;
@@ -44,7 +48,7 @@ import { Input } from '@angular/core';
       justify-content: center;
     }
 
-    .technologies {
+    #technologies {
       display: flex;
       gap: 1rem;
     }
@@ -53,18 +57,17 @@ import { Input } from '@angular/core';
       font-size: 1.5rem;
     }
 
-    ::ng-deep .technologies .p-button {
+    ::ng-deep #technologies .p-button {
       height: 3rem;
       width: 3rem;
       padding: 25%;
     }
 
-    ::ng-deep .technologies .pi {
+    ::ng-deep #technologies .pi {
       font-size: 1.5rem;
     }
   `
 })
 export class ProjectCardComponent {
-  @Input() title = "";
-  @Input() link = "";
+  @Input() project: Project = new Project("", "", "", "", [], []);
 }
