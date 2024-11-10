@@ -47,7 +47,10 @@ import { projects } from './project.class';
       </ng-template>
     </section>
     <main>
-      <project-showcase-component *ngIf="device == deviceEnum.Default else mobileProjectCards" [project]="projects[0]"/>
+      <project-showcase-component *ngIf="device == deviceEnum.Default" [project]="projects[0]"/>
+      <section id="desktop-project-cards" *ngIf="device == deviceEnum.Default else mobileProjectCards">
+        <project-card-component *ngFor="let project of projects | slice:1" [project]="project"/>
+      </section>
       <ng-template #mobileProjectCards>
           <project-card-component *ngFor="let project of projects" [project]="project"/>
       </ng-template>
@@ -77,6 +80,15 @@ import { projects } from './project.class';
     #social-links {
       display: flex;
       gap: 1rem;
+    }
+
+    #desktop-project-cards {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #desktop-project-cards project-card-component {
+      flex: 25%;
     }
   `
 })

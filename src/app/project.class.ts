@@ -4,9 +4,16 @@ export class Project {
   subtitle: string;
   description: string;
   bullets:  Array<string>;
-  technologies: Array<string>;
+  technologies: Array<[string, string]>;
 
-  constructor(title: string, link: string, subtitle: string, description: string, bullets: Array<string>, technologies: Array<string>) {
+  constructor(
+    title: string,
+    link: string,
+    subtitle: string,
+    description: string,
+    bullets: Array<string>,
+    technologies: Array<[string, string]>,
+  ) {
     this.title = title;
     this.link = link;
     this.subtitle = subtitle;
@@ -28,23 +35,22 @@ export const projects = [
       "highly customizable with options for manually entering fields"
     ],
     [
-      "devicon-python-plain",
-      "pi pi-book"
+      ["python", "devicon-python-plain"],
+      ["customtkinter", "pi pi-book"]
     ]
   ),
   new Project(
-    // TODO: update this description
     "Advent of Code 2023",
     "https://github.com/SharieRhea/AdventOfCode2023",
     "25 Christmas-themed 2-part programming puzzles.",
-    "My solutions to Eric Wastl's Advent of Code challenges! In 2023 I chose Kotlin in order to gain more familiarity with the language.",
+    "My solutions to Eric Wastl's Advent of Code challenges! In 2023 I chose Kotlin in order to gain more familiarity with the language. Some problem topics include:",
     [
-      "path-finding",
-      "large dataset analysis",
-      "dynamic programming"
+      "data structures: hashmaps, graphs, trees, ...",
+      "recursion, dynamic programming, memoization, ...",
+      "breadth-first search, Karger's, Dijkstra's, ..."
     ],
     [
-      "devicon-kotlin-plain"
+      ["kotlin", "devicon-kotlin-plain"]
     ]
   )
 ]

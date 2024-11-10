@@ -23,8 +23,8 @@ import { Project } from './project.class';
         </ul>
       </section>
       <section id="technologies">
-        <p-button *ngFor="let icon of project.technologies" [raised]="true" [text]="true" [rounded]="true">
-          <i [class]="icon"></i>
+        <p-button class="technology-icon" *ngFor="let icon of project.technologies" [raised]="true" [text]="true" [rounded]="true">
+          <i [class]="icon[1]"></i>
         </p-button>
       </section>
     </section>
@@ -57,7 +57,7 @@ import { Project } from './project.class';
       font-size: 1.5rem;
     }
 
-    ::ng-deep #technologies .p-button {
+    ::ng-deep #technologies .technology-icon .p-button {
       height: 3rem;
       width: 3rem;
       padding: 25%;

@@ -24,8 +24,8 @@ import { Project } from './project.class';
           </ul>
         </section>
        <section id="technologies">
-        <p-button *ngFor="let icon of project.technologies" [raised]="true" [text]="true" [rounded]="true">
-          <i [class]="icon"></i>
+        <p-button *ngFor="let icon of project.technologies" [label]="icon[0]" [raised]="true" [text]="true" [rounded]="true">
+          <i [class]="icon[1]"></i>
         </p-button>
       </section>
       </section>
@@ -67,13 +67,14 @@ import { Project } from './project.class';
     }
 
     i {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      padding-right: 0.75rem;
     }
 
     ::ng-deep #technologies .p-button {
-      height: 4rem;
-      width: 4rem;
-      padding: 25%;
+      /* height: 4rem; */
+      /* width: 4rem; */
+      /* padding: 25%; */
     }
 
     ::ng-deep .pi {
