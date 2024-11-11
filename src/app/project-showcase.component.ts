@@ -9,7 +9,6 @@ import { Project } from './project.class';
   standalone: true,
   imports: [CommonModule, ProjectLinkButtonComponent, ButtonModule],
   template: `
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <section id="showcase-container">
     <img src="images/test-image.jpg" alt="" class="fade-out"/>
       <section id="content-container">
@@ -69,12 +68,6 @@ import { Project } from './project.class';
     i {
       font-size: 1.5rem;
       padding-right: 0.75rem;
-    }
-
-    ::ng-deep #technologies .p-button {
-      /* height: 4rem; */
-      /* width: 4rem; */
-      /* padding: 25%; */
     }
 
     ::ng-deep .pi {

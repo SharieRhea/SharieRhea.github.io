@@ -83,12 +83,8 @@ import { projects } from './project.class';
     }
 
     #desktop-project-cards {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    #desktop-project-cards project-card-component {
-      flex: 25%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   `
 })

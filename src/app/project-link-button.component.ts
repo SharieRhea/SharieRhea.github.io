@@ -9,16 +9,12 @@ import { ButtonModule } from 'primeng/button';
   imports: [CommonModule, ButtonModule],
   template: `
     <a [href]="link" target="_blank" rel="noopener noreferrer">
-      <p-button [label]="label" [icon]="icon" size="large" />
+      <p-button [label]="label" [icon]="icon" size="large"/>
     </a>
   `,
   styles: `
     :host ::ng-deep .p-button {
       border-radius: 12px;
-    }
-
-    :host ::ng-deep .p-button-label {
-      font-size: 1.5rem;
     }
 
     :host ::ng-deep .p-button-icon {

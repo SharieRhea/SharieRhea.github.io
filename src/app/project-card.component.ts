@@ -10,7 +10,6 @@ import { Project } from './project.class';
   standalone: true,
   imports: [CommonModule, ProjectLinkButtonComponent, ButtonModule],
   template: `
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <section id="container">
       <project-link-button-component [label]="project.title" [link]="project.link" icon="pi pi-github"/>
       <section id="description">
@@ -41,11 +40,12 @@ import { Project } from './project.class';
     #container {
       background: linear-gradient(140deg, rgb(21, 39, 70) 0%, rgb(42, 60, 96) 100%);
       max-width: 100%;
+      height: 100%;
       padding: 1rem;
       border-radius: 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
     }
 
     #technologies {
