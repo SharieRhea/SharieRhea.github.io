@@ -1,0 +1,7 @@
+:host ::ng-deep .p-button {
+  border-radius: 12px;
+}
+
+:host ::ng-deep .p-button-icon {
+  font-size: 2rem;
+}

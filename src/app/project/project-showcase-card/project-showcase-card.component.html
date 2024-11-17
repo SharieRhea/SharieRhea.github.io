@@ -1,0 +1,20 @@
+<section id="showcase-container">
+<img [src]="project.image" alt="" class="fade-out"/>
+  <section id="content-container">
+    <project-button [label]="project.title" [link]="project.link" icon="pi pi-github"/>
+    <section>
+      <p>{{ project.subtitle }}</p>
+      <p>{{ project.description }}</p>
+      <ul>
+        <li *ngFor="let bullet of project.bullets">
+          {{bullet}}
+        </li>
+      </ul>
+    </section>
+   <section id="technologies">
+    <p-button *ngFor="let icon of project.technologies" [label]="icon[0]" [raised]="true" [text]="true" [rounded]="true">
+      <i [class]="icon[1]"></i>
+    </p-button>
+  </section>
+  </section>
+</section>

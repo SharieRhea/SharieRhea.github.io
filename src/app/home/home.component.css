@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  z-index: 100;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 80%;
+}
+
+#social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+#desktop-project-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

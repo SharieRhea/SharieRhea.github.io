@@ -1,0 +1,25 @@
+<nav>
+  <navigation-bar/>
+</nav>
+<header>
+  <h2 [ngClass]="device">Hi there, I'm</h2>
+  <h1 [ngClass]="device">SHARIE RHEA</h1>
+</header>
+<p class="subtitle" *ngIf="device == Device.Default">A computer science student, driven learner, and jack-of-all-trades.</p>
+<section id="social-links" >
+  <social-button *ngIf="device == Device.Default else mobileSocialsLinks" label="GitHub" link="https://github.com/SharieRhea"/>
+  <social-button *ngIf="device == Device.Default" label="LinkedIn" link="https://www.linkedin.com/in/sharierhea"/>
+  <ng-template #mobileSocialsLinks>
+    <social-icon-button icon="pi pi-github" link="https://github.com/SharieRhea"/>
+    <social-icon-button icon="pi pi-linkedin" link="https://www.linkedin.com/in/sharierhea"/>
+  </ng-template>
+</section>
+<main>
+  <project-showcase-card *ngIf="device == Device.Default" [project]="projects[0]"/>
+  <section id="desktop-project-cards" *ngIf="device == Device.Default else mobileProjectCards">
+    <project-card *ngFor="let project of projects | slice:1" [project]="project"/>
+  </section>
+  <ng-template #mobileProjectCards>
+      <project-card *ngFor="let project of projects" [project]="project"/>
+  </ng-template>
+</main>

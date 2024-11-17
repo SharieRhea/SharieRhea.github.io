@@ -26,7 +26,7 @@ export class Project {
   }
 }
 
-export const projects = [
+export const PROJECTS = [
   new Project(
     "Track Tagger",
     "https://github.com/SharieRhea/TrackTagger",
