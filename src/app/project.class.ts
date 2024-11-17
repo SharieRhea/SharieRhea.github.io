@@ -1,6 +1,7 @@
 export class Project {
   title: string;
   link: string;
+  image: string;
   subtitle: string;
   description: string;
   bullets:  Array<string>;
@@ -9,6 +10,7 @@ export class Project {
   constructor(
     title: string,
     link: string,
+    image: string,
     subtitle: string,
     description: string,
     bullets: Array<string>,
@@ -16,6 +18,7 @@ export class Project {
   ) {
     this.title = title;
     this.link = link;
+    this.image = image;
     this.subtitle = subtitle;
     this.description = description;
     this.bullets = bullets;
@@ -27,6 +30,7 @@ export const projects = [
   new Project(
     "Track Tagger",
     "https://github.com/SharieRhea/TrackTagger",
+    "images/track-tagger.png",
     "A graphical application for editing .mp3 metadata.",
     "Queries Last.fm using an API key to provide automatic fetching of tags, album title and artist, and album cover.",
     [
@@ -42,6 +46,7 @@ export const projects = [
   new Project(
     "Advent of Code 2023",
     "https://github.com/SharieRhea/AdventOfCode2023",
+    "",
     "25 Christmas-themed 2-part programming puzzles.",
     "My solutions to Eric Wastl's Advent of Code challenges! In 2023 I chose Kotlin in order to gain more familiarity with the language. Some problem topics include:",
     [
@@ -56,6 +61,7 @@ export const projects = [
   new Project(
     "Operating System Simulation",
     "https://github.com/SharieRhea/OperatingSystem",
+    "",
     "Simulation of a single-core operating system in Java.",
     "This multi-threaded simulation uses cooperative multitasking and a priority scheduler to manage processes. Memory is managed using paging and virtual memory. Additional features:",
     [
@@ -70,6 +76,7 @@ export const projects = [
   new Project(
     "Processor Simulation",
     "https://github.com/SharieRhea/Processor",
+    "",
     "Simulation of a 32-bit processor in Java.",
     "This simulation includes a custom assembly language, SIA32, and functionality for running instructions built from the ground up using Bits and Words.",
     [
@@ -84,6 +91,7 @@ export const projects = [
   new Project(
     "NY Eats",
     "https://github.com/SharieRhea/NY-Eats",
+    "",
     "Information Android app that lists (fictional) places to eat in New York City.",
     "Users may choose from 3 common categories: coffee shops, fast food, and restaurants. Features:",
     [
@@ -98,6 +106,7 @@ export const projects = [
   new  Project(
     "Tic-Tac-Toe",
     "https://github.com/SharieRhea/ticTacToe",
+    "",
     "A pixelated tic-tac-toe game with 3 computer players to challenge.",
     "",
     [

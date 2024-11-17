@@ -33,6 +33,10 @@ import { Project } from './project.class';
       margin: 2rem;
     }
 
+    :host:hover {
+      filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
+    }
+
     ul {
       padding-left: 1rem;
     }
@@ -69,5 +73,5 @@ import { Project } from './project.class';
   `
 })
 export class ProjectCardComponent {
-  @Input() project: Project = new Project("", "", "", "", [], []);
+  @Input() project: Project = new Project("", "", "", "", "", [], []);
 }

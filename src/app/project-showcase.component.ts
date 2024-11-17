@@ -10,7 +10,7 @@ import { Project } from './project.class';
   imports: [CommonModule, ProjectLinkButtonComponent, ButtonModule],
   template: `
     <section id="showcase-container">
-    <img src="images/test-image.jpg" alt="" class="fade-out"/>
+    <img [src]="project.image" alt="" class="fade-out"/>
       <section id="content-container">
         <project-link-button-component [label]="project.title" [link]="project.link" icon="pi pi-github"/>
         <section>
@@ -53,11 +53,13 @@ import { Project } from './project.class';
       left: 1rem;
       right: 1rem;
       bottom: 1rem;
+      max-width: 50%;
     }
 
     .fade-out {
       mask-image: linear-gradient(270deg, rgba(0,0,0,1), rgba(0,0,0,.4), rgba(0,0,0,0));
       max-width: 100%;
+      border-radius: 1rem;
     }
 
     #technologies {
@@ -77,5 +79,5 @@ import { Project } from './project.class';
   `
 })
 export class ProjectShowcaseComponent {
-  @Input() project: Project = new Project("", "", "", "", [], [])
+  @Input() project: Project = new Project("", "", "", "", "", [], []);
 }
