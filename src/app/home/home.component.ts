@@ -6,9 +6,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { Device } from "../device.enum";
 import { ProjectService } from "../project/project.service";
-import { Project } from "../project/project.class";
 import { NavigationBar } from "../navigation-bar/navigation-bar.component";
-
 import { ProjectCard } from "../project/project-card/project-card.component";
 import { ProjectShowcaseCard } from "../project/project-showcase-card/project-showcase-card.component";
 import { SocialButton } from "../social/social-button/social-button.component";
@@ -35,13 +33,13 @@ import { SocialIconButton } from "../social/social-icon-button/social-icon-link-
 export class Home implements OnInit {
   Device = Device;
   device = Device.Default;
-  projects: Project[] = []
+  projectKeys!: string[];
 
-  constructor(private breakpointObserver: BreakpointObserver, projectService: ProjectService) {
-    this.projects = projectService.getProjects();
+  constructor(private breakpointObserver: BreakpointObserver, private projectService: ProjectService) {
   }
 
   ngOnInit() {
+    this.projectKeys = Object.keys(this.projectService.getProjects());
     this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet]).subscribe(result => {
       const breakpoints = result.breakpoints;
 

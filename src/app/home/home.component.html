@@ -15,11 +15,11 @@
   </ng-template>
 </section>
 <main>
-  <project-showcase-card *ngIf="device == Device.Default" [project]="projects[0]"/>
+  <project-showcase-card *ngIf="device == Device.Default" [projectKey]="projectKeys[0]"/>
   <section id="desktop-project-cards" *ngIf="device == Device.Default else mobileProjectCards">
-    <project-card *ngFor="let project of projects | slice:1" [project]="project"/>
+    <project-card *ngFor="let projectKey of projectKeys | slice:1" [projectKey]="projectKey"/>
   </section>
   <ng-template #mobileProjectCards>
-      <project-card *ngFor="let project of projects" [project]="project"/>
+      <project-card *ngFor="let projectKey of projectKeys" [projectKey]="projectKey"/>
   </ng-template>
 </main>

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
-import { Input } from '@angular/core';
 
 import { Project } from '../project.class';
 import { ProjectButton } from '../project-button/project-button.component';
+import { ProjectService } from '../project.service';
 
 @Component({
   selector: 'project-card',
@@ -13,6 +13,13 @@ import { ProjectButton } from '../project-button/project-button.component';
   styleUrls: ['./project-card.component.css'],
   imports: [CommonModule, ButtonModule, ProjectButton]
 })
-export class ProjectCard {
-  @Input() project: Project = new Project("", "", "", "", "", [], []);
+export class ProjectCard implements OnInit {
+  projectKey = input.required<string>();
+  project!: Project;
+
+  constructor(private projectService: ProjectService) { }
+
+  ngOnInit(): void {
+    this.project = this.projectService.getProjects()[this.projectKey()];
+  }
 }

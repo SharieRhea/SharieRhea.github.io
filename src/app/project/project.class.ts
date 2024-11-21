@@ -26,8 +26,8 @@ export class Project {
   }
 }
 
-export const PROJECTS = [
-  new Project(
+export const PROJECTS: Record<string, Project> = {
+  "track-tagger": new Project(
     "Track Tagger",
     "https://github.com/SharieRhea/TrackTagger",
     "images/track-tagger.png",
@@ -43,7 +43,7 @@ export const PROJECTS = [
       ["customtkinter", "pi pi-book"]
     ]
   ),
-  new Project(
+  "aoc-2023": new Project(
     "Advent of Code 2023",
     "https://github.com/SharieRhea/AdventOfCode2023",
     "",
@@ -58,7 +58,7 @@ export const PROJECTS = [
       ["kotlin", "devicon-kotlin-plain"]
     ]
   ),
-  new Project(
+  "operating-system": new Project(
     "Operating System Simulation",
     "https://github.com/SharieRhea/OperatingSystem",
     "",
@@ -73,7 +73,7 @@ export const PROJECTS = [
       ["java", "devicon-java-plain"]
     ]
   ),
-  new Project(
+  "processor": new Project(
     "Processor Simulation",
     "https://github.com/SharieRhea/Processor",
     "",
@@ -88,7 +88,7 @@ export const PROJECTS = [
       ["java", "devicon-java-plain"]
     ]
   ),
-  new Project(
+  "ny-eats": new Project(
     "NY Eats",
     "https://github.com/SharieRhea/NY-Eats",
     "",
@@ -103,7 +103,7 @@ export const PROJECTS = [
       ["jetpack compose", "devicon-jetpackcompose-plain"]
     ]
   ),
-  new  Project(
+  "tic-tac-toe": new Project(
     "Tic-Tac-Toe",
     "https://github.com/SharieRhea/ticTacToe",
     "",
@@ -119,4 +119,4 @@ export const PROJECTS = [
       ["pygame", "pi pi-book"]
     ]
   )
-]
+}
