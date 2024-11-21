@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { RouterLink, RouterOutlet, RouterLinkActive } from "@angular/router";
 import { ButtonModule } from 'primeng/button';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
@@ -19,9 +18,6 @@ import { SocialIconButton } from "../social/social-icon-button/social-icon-link-
   styleUrls: ['./home.component.css'],
   imports: [
     CommonModule,
-    RouterOutlet,
-    RouterLink,
-    RouterLinkActive,
     ButtonModule,
     NavigationBar,
     ProjectCard,

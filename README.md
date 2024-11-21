@@ -2,16 +2,30 @@
 
 ## TODO
 
+### Content TODOs
+
+- [X] allow clicking on a project card to lead to the project's showcase page
+- [X] add project cards to desktop view, 2 side-by-side
+
 - [X] port over all project descriptions 
 - [ ] find images/take screenshots
 
-- [ ] allow clicking on a project card to lead to the project's showcase page
+- [ ] make the about page
+
+- [ ] implement mobile versions for:
+  - [ ] projects
+  - [ ] individual project showcase pages
+
+- [X] add technology name to button on project showcase
+
+### Visual TODOs
+
+- [X] fix visuals for home page where all project card text is underlined like a hyperlink
+- [X] fix visuals for projects page (need grid and spacing around edges)
+- [X] fix visuals for project showcase pages (spacing around edges)
 
 - [ ] resize project title on mobile to be smaller
 - [ ] fix text vertical alignment on project link buttons
-- [X] add technology name to button on project showcase
-
-- [X] add project cards to desktop view, 2 side-by-side
 
 ## Ideas
 

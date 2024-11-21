@@ -10,6 +10,11 @@ ul {
   padding-left: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #container {
   background: linear-gradient(140deg, rgb(21, 39, 70) 0%, rgb(42, 60, 96) 100%);
   max-width: 100%;

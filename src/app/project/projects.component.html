@@ -1,0 +1,11 @@
+<nav>
+  <navigation-bar/>
+</nav>
+<main>
+  <section id="desktop-project-cards" *ngIf="device == Device.Default else mobileProjectCards">
+    <project-card *ngFor="let projectKey of projectKeys" [projectKey]="projectKey"/>
+  </section>
+  <ng-template #mobileProjectCards>
+      <project-card *ngFor="let projectKey of projectKeys" [projectKey]="projectKey"/>
+  </ng-template>
+</main>

@@ -5,13 +5,14 @@ import { ButtonModule } from 'primeng/button';
 import { Project } from '../project.class';
 import { ProjectButton } from '../project-button/project-button.component';
 import { ProjectService } from '../project.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'project-card',
   standalone: true,
   templateUrl : './project-card.component.html',
   styleUrls: ['./project-card.component.css'],
-  imports: [CommonModule, ButtonModule, ProjectButton]
+  imports: [CommonModule, ButtonModule, ProjectButton, RouterLink, RouterLinkActive]
 })
 export class ProjectCard implements OnInit {
   projectKey = input.required<string>();
