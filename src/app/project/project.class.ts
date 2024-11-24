@@ -46,7 +46,7 @@ export const PROJECTS: Record<string, Project> = {
   "aoc-2023": new Project(
     "Advent of Code 2023",
     "https://github.com/SharieRhea/AdventOfCode2023",
-    "",
+    "images/aoc-2023.png",
     "25 Christmas-themed 2-part programming puzzles.",
     "My solutions to Eric Wastl's Advent of Code challenges! In 2023 I chose Kotlin in order to gain more familiarity with the language. Some problem topics include:",
     [
@@ -61,7 +61,7 @@ export const PROJECTS: Record<string, Project> = {
   "operating-system": new Project(
     "Operating System Simulation",
     "https://github.com/SharieRhea/OperatingSystem",
-    "",
+    "images/operating-system.png",
     "Simulation of a single-core operating system in Java.",
     "This multi-threaded simulation uses cooperative multitasking and a priority scheduler to manage processes. Memory is managed using paging and virtual memory. Additional features:",
     [
@@ -76,7 +76,7 @@ export const PROJECTS: Record<string, Project> = {
   "processor": new Project(
     "Processor Simulation",
     "https://github.com/SharieRhea/Processor",
-    "",
+    "images/processor.png",
     "Simulation of a 32-bit processor in Java.",
     "This simulation includes a custom assembly language, SIA32, and functionality for running instructions built from the ground up using Bits and Words.",
     [
@@ -91,7 +91,7 @@ export const PROJECTS: Record<string, Project> = {
   "ny-eats": new Project(
     "NY Eats",
     "https://github.com/SharieRhea/NY-Eats",
-    "",
+    "images/ny-eats.png",
     "Information Android app that lists (fictional) places to eat in New York City.",
     "Users may choose from 3 common categories: coffee shops, fast food, and restaurants. Features:",
     [
@@ -106,7 +106,7 @@ export const PROJECTS: Record<string, Project> = {
   "tic-tac-toe": new Project(
     "Tic-Tac-Toe",
     "https://github.com/SharieRhea/ticTacToe",
-    "",
+    "images/tic-tac-toe.png",
     "A pixelated tic-tac-toe game with 3 computer players to challenge.",
     "",
     [

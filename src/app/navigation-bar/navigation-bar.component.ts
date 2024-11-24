@@ -17,7 +17,7 @@ export class NavigationBar implements OnInit {
       {
         label: "Home",
         icon: "pi pi-home",
-        route: ""
+        route: "/home"
       },
       {
         label: "Projects",

@@ -10,11 +10,14 @@
 - [X] port over all project descriptions 
 - [ ] find images/take screenshots
 
-- [ ] make the about page
+- [X] make the about page
+
+- [ ] fix clicking on project github link goes to project showcase
 
 - [ ] implement mobile versions for:
   - [ ] projects
   - [ ] individual project showcase pages
+  - [ ] about page
 
 - [X] add technology name to button on project showcase
 
