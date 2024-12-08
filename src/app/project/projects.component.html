@@ -6,6 +6,8 @@
     <project-card *ngFor="let projectKey of projectKeys" [projectKey]="projectKey"/>
   </section>
   <ng-template #mobileProjectCards>
+    <section id="mobile-project-cards">
       <project-card *ngFor="let projectKey of projectKeys" [projectKey]="projectKey"/>
+    </section>
   </ng-template>
 </main>

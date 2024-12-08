@@ -31,8 +31,7 @@ export class Home implements OnInit {
   device = Device.Default;
   projectKeys!: string[];
 
-  constructor(private breakpointObserver: BreakpointObserver, private projectService: ProjectService) {
-  }
+  constructor(private breakpointObserver: BreakpointObserver, private projectService: ProjectService) {}
 
   ngOnInit() {
     this.projectKeys = Object.keys(this.projectService.getProjects());
