@@ -30,6 +30,9 @@ export class Home implements OnInit {
   Device = Device;
   device = Device.Default;
   projectKeys!: string[];
+  letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  title = "SHARIE RHEA";
+  text = "SHARIE RHEA";
 
   constructor(private breakpointObserver: BreakpointObserver, private projectService: ProjectService) {}
 
@@ -45,5 +48,27 @@ export class Home implements OnInit {
       else
         this.device = Device.Default;
     });
+    this.decrypt();
+  }
+
+  decrypt() {
+    let iterations = 0;
+
+    var interval = setInterval(() => {
+        this.text = this.title.split("")
+        .map((letter, index) => {
+            if(index < iterations || letter === " ") {
+                return this.title[index];
+            }
+            return this.letters[Math.floor(Math.random() * 26)];
+        })
+        .join("");
+
+        if(iterations >= this.title.length) {
+            clearInterval(interval);
+        }
+
+        iterations += 1/4;
+    }, 40);
   }
 }

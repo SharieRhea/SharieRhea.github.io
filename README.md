@@ -14,9 +14,9 @@
 
 - [X] fix clicking on project github link goes to project showcase
 
-- [ ] implement mobile versions for:
-  - [ ] projects
-  - [ ] individual project showcase pages
+- [X] implement mobile versions for:
+  - [X] projects
+  - [X] individual project showcase pages
   - [X] about page
 
 - [X] add technology name to button on project showcase
@@ -27,12 +27,11 @@
 - [X] fix visuals for projects page (need grid and spacing around edges)
 - [X] fix visuals for project showcase pages (spacing around edges)
 
-- [ ] resize project title on mobile to be smaller
-- [ ] fix text vertical alignment on project link buttons
+- [X] resize project title on mobile to be smaller
 
 ## Ideas
 
-- [ ] recreate the text "decode" effect on "SHARIE RHEA"
+- [X] recreate the text "decode" effect on "SHARIE RHEA"
 - [ ] add subtle animations (fade or slide in for project cards)
 - [ ] allow filtering projects by technologies (by clicking on them from a card?)
 - [ ] allow switching to light theme
