@@ -6,7 +6,6 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { Project } from '../project.class';
 import { ProjectButton } from '../project-button/project-button.component';
 import { ProjectService } from '../project.service';
-import { Device } from '../../device.enum';
 
 @Component({
   selector: 'project-showcase-card',
@@ -18,8 +17,7 @@ import { Device } from '../../device.enum';
 export class ProjectShowcaseCard implements OnInit {
   projectKey = input.required<string>();
   project!: Project;
-  Device = Device;
-  device = Device.Default;
+  isPhone = true
 
   constructor(private breakpointObserver: BreakpointObserver, private projectService: ProjectService) { }
 
@@ -29,12 +27,16 @@ export class ProjectShowcaseCard implements OnInit {
     this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet]).subscribe(result => {
       const breakpoints = result.breakpoints;
 
-      if (breakpoints[Breakpoints.HandsetPortrait])
-        this.device = Device.Phone;
+      if (breakpoints[Breakpoints.HandsetPortrait]) {
+        this.isPhone = true;
+        console.log("true");
+      }
       else if (breakpoints[Breakpoints.TabletPortrait])
-        this.device = Device.Tablet;
-      else
-        this.device = Device.Default;
+        this.isPhone = false;
+      else {
+        this.isPhone = false;
+        console.log("false");
+      }
     });
   }
 }

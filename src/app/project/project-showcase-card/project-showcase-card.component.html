@@ -1,13 +1,12 @@
-<section id="showcase-container">
-<img [src]="project.image" alt="" class="fade-out"/>
-  <section id="content-container">
+<section id="showcase-container" [ngClass]="{'is-phone': isPhone}">
+  <section id="content-container" [ngClass]="{'is-phone': isPhone}">
     <project-button [label]="project.title" [link]="project.link" icon="pi pi-github"/>
     <section>
       <p>{{ project.subtitle }}</p>
       <p>{{ project.description }}</p>
       <ul>
         <li *ngFor="let bullet of project.bullets">
-          {{bullet}}
+          {{ bullet }}
         </li>
       </ul>
     </section>
@@ -17,4 +16,5 @@
     </p-button>
   </section>
   </section>
+  <img [src]="project.image" alt="" [ngClass]="{'is-phone': isPhone}"/>
 </section>
