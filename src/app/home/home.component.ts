@@ -27,12 +27,13 @@ import { SocialIconButton } from "../social/social-icon-button/social-icon-link-
   ],
 })
 export class Home implements OnInit {
+  // used for responsive design
   Device = Device;
   device = Device.Default;
+  // used to showcase the most recent project and generate cards for the rest
   projectKeys!: string[];
-  letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  title = "SHARIE RHEA";
-  text = "SHARIE RHEA";
+  // the text that is actually displayed
+  name = "SHARIE RHEA";
 
   constructor(private breakpointObserver: BreakpointObserver, private projectService: ProjectService) {}
 
@@ -48,27 +49,37 @@ export class Home implements OnInit {
       else
         this.device = Device.Default;
     });
+
+    // start the decrypt effect on every page load/initialization
     this.decrypt();
   }
 
+  // displays randomized characters every 40ms and "decrypts" one character at a time until the
+  // entire string is "decrypted"
   decrypt() {
     let iterations = 0;
+    let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let goal = "SHARIE RHEA";
 
     var interval = setInterval(() => {
-        this.text = this.title.split("")
-        .map((letter, index) => {
-            if(index < iterations || letter === " ") {
-                return this.title[index];
-            }
-            return this.letters[Math.floor(Math.random() * 26)];
-        })
-        .join("");
-
-        if(iterations >= this.title.length) {
-            clearInterval(interval);
+      // split into characters and map each one
+      this.name = goal.split("").map((letter, index) => {
+        // use the correct character if we've cycled enough times or it's a space
+        if(index < iterations || letter === " ") {
+            return goal[index];
         }
+        // otherwise return a random character
+        return letters[Math.floor(Math.random() * 26)];
+      }).join(""); // collect back into a string
 
-        iterations += 1/4;
+      // effect is over if we've hit the end of the string, clear the interval for performance
+      if(iterations >= goal.length) {
+        clearInterval(interval);
+      }
+
+      // randomize 4 times before "decrypting" the next character
+      iterations += 1/4;
+    // run an iteration every 40ms
     }, 40);
   }
 }

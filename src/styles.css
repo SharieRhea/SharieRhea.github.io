@@ -29,11 +29,11 @@ h1 {
   margin: 0;
 }
 
-h1.phone {
+.phone h1 {
   font-size: 3rem;
 }
 
-h1.tablet {
+.tablet h1 {
   font-size: 4.5rem;
 }
 
@@ -42,12 +42,36 @@ h2 {
   margin-bottom: 0;
 }
 
-h2.phone {
+.phone h2 {
   font-size: 2rem;
 }
 
-h2.tablet {
+.tablet h2 {
   font-size: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.phone p {
+  font-size: 1rem;
+}
+
+.tablet p {
+  font-size: 1.1rem;
+}
+
+main ul {
+  font-size: 1.2rem;
+}
+
+main .phone ul {
+  font-size: 1rem;
+}
+
+main .tablet ul {
+  font-size: 1.1rem;
 }
 
 .subtitle {

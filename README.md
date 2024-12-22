@@ -2,6 +2,11 @@
 
 ## TODO
 
+- [X] refactor ALL breakpoint observers to use the Device enum instead of a boolean
+- [ ] refactor all css to better utilize the main styles.css file
+- [ ] fix image aspect ratios when changing window size
+- [ ] use rem properly
+
 ### Content TODOs
 
 - [X] allow clicking on a project card to lead to the project's showcase page

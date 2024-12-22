@@ -1,8 +1,8 @@
-#desktop-project-cards {
+.default, .tablet {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-#mobile-project-cards {
+.phone {
   display: grid;
 }

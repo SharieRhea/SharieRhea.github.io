@@ -2,14 +2,6 @@ main {
   margin: 1rem;
 }
 
-h2.is-phone {
-  font-size: 2rem;
-}
-
-section.is-phone p {
-  font-size: 1.2rem;
-}
-
 section {
   max-width: 80%;
   margin: auto;
@@ -20,15 +12,7 @@ h2 {
   margin-left: 5%;
 }
 
-p {
-  font-size: 2rem;
-}
-
-i {
-  color: var(--primary-color);
-}
-
-a:link {
+i, a:link {
   color: var(--primary-color);
 }
 
@@ -38,4 +22,12 @@ a:visited {
 
 a:hover {
   color: var(--primary-300);
+}
+
+h2.phone {
+  font-size: 2rem;
+}
+
+section.phone p {
+  font-size: 1.2rem;
 }

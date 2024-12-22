@@ -11,7 +11,7 @@ ul {
   gap: 2rem;
 }
 
-#showcase-container.is-phone {
+#showcase-container.phone {
   flex-direction: column;
 }
 
@@ -27,7 +27,7 @@ ul {
   max-width: 50%;
 }
 
-#content-container.is-phone {
+#content-container.phone {
   max-width: 100%;
   flex-direction: column;
   gap: 1rem;
@@ -39,7 +39,7 @@ img {
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
 }
 
-img.is-phone {
+img.phone {
   max-width: 100%;
 }
 

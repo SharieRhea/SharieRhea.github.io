@@ -6,10 +6,10 @@
   font-size: 2rem;
 }
 
-:host ::ng-deep .is-phone .p-button-icon {
+:host ::ng-deep .phone .p-button-icon {
   font-size: 1.5rem;
 }
 
-:host ::ng-deep .is-phone .p-button {
+:host ::ng-deep .phone .p-button {
   font-size: 1.2rem;
 }

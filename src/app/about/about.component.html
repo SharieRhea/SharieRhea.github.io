@@ -1,9 +1,9 @@
 <nav>
   <navigation-bar/>
 </nav>
-<main>
-  <h2 [ngClass]="{'is-phone': isPhone}">So, who are you really?</h2>
-  <section [ngClass]="{'is-phone': isPhone}">
+<main [ngClass]="device">
+  <h2>So, who are you really?</h2>
+  <section>
     <p>
       I grew up in upstate New York surrounded by nature and small, familiar town. Over time my <i>curious nature</i> has led me to try a plethora of hobbies including:
       digital and traditional art, reading, knitting, crocheting, hiking, skiing, powerlifting, and riding motorcycles. While my motivation for many of these activities

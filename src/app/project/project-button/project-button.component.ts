@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Input } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Device } from '../../device.enum';
 
 @Component({
   selector: 'project-button',
@@ -12,10 +13,11 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
   imports: [CommonModule, ButtonModule]
 })
 export class ProjectButton {
+  Device = Device;
+  device = Device.Default;
   @Input() label = "";
   @Input() link = "";
   @Input() icon = "";
-  isPhone = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
@@ -24,11 +26,11 @@ export class ProjectButton {
       const breakpoints = result.breakpoints;
 
       if (breakpoints[Breakpoints.HandsetPortrait])
-        this.isPhone = true;
+        this.device = Device.Phone;
       else if (breakpoints[Breakpoints.TabletPortrait])
-        this.isPhone = false;
+        this.device = Device.Tablet;
       else
-        this.isPhone = false;
+        this.device = Device.Default;
     });
   }
 }

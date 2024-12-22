@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { NavigationBar } from "../navigation-bar/navigation-bar.component";
+import { Device } from "../device.enum";
 
 @Component({
   selector: 'about',
@@ -12,7 +13,7 @@ import { NavigationBar } from "../navigation-bar/navigation-bar.component";
   imports: [CommonModule, NavigationBar],
 })
 export class About {
-  isPhone = true;
+  device = Device.Default;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
@@ -21,11 +22,11 @@ export class About {
       const breakpoints = result.breakpoints;
 
       if (breakpoints[Breakpoints.HandsetPortrait])
-        this.isPhone = true;
+        this.device = Device.Phone;
       else if (breakpoints[Breakpoints.TabletPortrait])
-        this.isPhone = false;
+        this.device = Device.Tablet;
       else
-        this.isPhone = false;
+        this.device = Device.Default;
     });
   }
 }

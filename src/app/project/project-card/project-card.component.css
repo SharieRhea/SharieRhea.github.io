@@ -3,7 +3,11 @@
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
 }
 
-ul {
+#description {
+  padding-left: 2rem;
+}
+
+.phone #description {
   padding-left: 1rem;
 }
 

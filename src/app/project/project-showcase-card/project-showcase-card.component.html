@@ -1,5 +1,5 @@
-<section id="showcase-container" [ngClass]="{'is-phone': isPhone}">
-  <section id="content-container" [ngClass]="{'is-phone': isPhone}">
+<section id="showcase-container" [ngClass]="device">
+  <section id="content-container" [ngClass]="device">
     <project-button [label]="project.title" [link]="project.link" icon="pi pi-github"/>
     <section>
       <p>{{ project.subtitle }}</p>
@@ -16,5 +16,5 @@
     </p-button>
   </section>
   </section>
-  <img [src]="project.image" alt="" [ngClass]="{'is-phone': isPhone}"/>
+  <img [src]="project.image" alt="" [ngClass]="device"/>
 </section>
