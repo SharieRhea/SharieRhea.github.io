@@ -1,0 +1,25 @@
+main {
+  margin: 1rem;
+}
+
+section {
+  max-width: 80%;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 0;
+  margin-left: 5%;
+}
+
+i, a:link {
+  color: var(--primary-color);
+}
+
+a:visited {
+  color: var(--primary-800);
+}
+
+a:hover {
+  color: var(--primary-300);
+}

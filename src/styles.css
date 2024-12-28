@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Space Mono");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+
+/* Media queries for responsive sizing. */
+
+/* Extra Small: phones */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+
+  .subtitle, #home-showcase {
+    display: none;
+  }
+
+  #home-project-cards {
+    display: none;
+  }
+}
+
+/* Small: large phones, portrait tablets */
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  .subtitle, #home-showcase {
+    display: none;
+  }
+}
+
+/* Medium: landscape tablets */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .subtitle, #home-showcase {
+    display: block;
+  }
+
+  #home-project-cards-mobile {
+    display: none;
+  }
+
+  #home-project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #project-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large: laptops, some desktops */
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Extra Large: desktops */
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Generic site styling. */
+
+* {
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: linear-gradient(var(--gray-900), var(--gray-800)) fixed;
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header {
+  width: 100%;
+}
+
+h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+.subtitle {
+  font-style: italic;
+}

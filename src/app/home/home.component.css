@@ -1,0 +1,22 @@
+:host, header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 80%;
+}
+
+#social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+#project-cards-mobile {
+  grid-template-columns: 1fr;
+}
+
+#project-cards {
+  grid-template-columns: 1fr 1fr;
+}

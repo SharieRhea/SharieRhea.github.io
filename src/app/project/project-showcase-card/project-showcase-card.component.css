@@ -1,0 +1,51 @@
+:host {
+  margin: 2rem;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+#showcase-container {
+  display: flex;
+  gap: 2rem;
+}
+
+#showcase-container.phone {
+  flex-direction: column;
+}
+
+#content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 50%;
+}
+
+img {
+  max-width: 50%;
+  object-fit: contain;
+  border-radius: .5rem;
+  filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
+}
+
+#technologies {
+  display: flex;
+  gap: 1rem;
+}
+
+/* fix size and spacing for language icons */
+i {
+  font-size: 1.5rem;
+  padding-right: 0.75rem;
+}
+
+/* fix size for primeng language icons */
+::ng-deep .pi {
+  font-size: 2rem;
+}

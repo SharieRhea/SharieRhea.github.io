@@ -1,0 +1,22 @@
+<section id="container">
+  <project-button [label]="project.title" [link]="project.link" icon="pi pi-github"/>
+  <section id="description">
+    <p>{{ project.subtitle }}</p>
+    <p>{{ project.description }}</p>
+    <ul>
+      <li *ngFor="let bullet of project.bullets">
+        {{bullet}}
+      </li>
+    </ul>
+  </section>
+  <section id="bottom-row">
+    <section id="technologies">
+      <p-button class="technology-icon" *ngFor="let icon of project.technologies" [raised]="true" [text]="true" [rounded]="true">
+        <i [class]="icon[1]"></i>
+      </p-button>
+    </section>
+    <a routerLink="/projects/{{ projectKey() }}" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <p-button id="showcase-link" icon="pi pi-arrow-right" size="large" [rounded]="true" />
+    </a>
+  </section>
+</section>

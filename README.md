@@ -1,25 +1,48 @@
-# sharierhea.dev
+# sharierhea.dev 
 
-### 0.1.0
-Finalize features list.</br>
-Gather resources for projects:</br>
-* Images or logos.</br>
-* Language icons.</br>
-* GitHub links and descriptions.</br>
+Hi there! The site is currently under maintenance, I'm using the space below to keep track of TODOs and necessary updates.
 
-Gather resources for art showcase - original files if possible.</br>
-Determine content layout - wireframes.</br>
-### 0.2.0
-Set up React project.</br>
-Implement responsive site navigation between pages and sections.</br>
-Decide on themeing.
-### 0.3.0
-Add “About Me” section with text description and links.</br>
-Add “Contact” section with links.</br>
-### 0.4.0
-Add “Projects” section with chronologically ordered projects.</br>
-Projects must have a description, logo, and GitHub link.</br>
-Implement sorting by language or tech stack.</br>
-### 0.5.0
-Add “Art Showcase” page with gallery of completed artworks.</br>
-Implement tagging system for digital art, pixel art, traditional art, etc.</br>
+## TODO
+
+- [ ] check accessibility for pretty much everything
+- [X] refactor ALL breakpoint observers to use the Device enum instead of a boolean
+- [ ] refactor all css to better utilize the main styles.css file
+- [X] fix image aspect ratios when changing window size
+- [X] use rem properly
+  - [X] set the base font size based on the screen's orientation and maybe aspect ratio as well
+  - [X] refactor and get rid of breakpoint observer everywhere
+
+### Content TODOs
+
+- [X] allow clicking on a project card to lead to the project's showcase page
+- [X] add project cards to desktop view, 2 side-by-side
+
+- [X] port over all project descriptions 
+- [ ] find images/take screenshots
+
+- [X] make the about page
+
+- [X] fix clicking on project github link goes to project showcase
+
+- [X] implement mobile versions for:
+  - [X] projects
+  - [X] individual project showcase pages
+  - [X] about page
+
+- [X] add technology name to button on project showcase
+
+### Visual TODOs
+
+- [X] fix visuals for home page where all project card text is underlined like a hyperlink
+- [X] fix visuals for projects page (need grid and spacing around edges)
+- [X] fix visuals for project showcase pages (spacing around edges)
+
+- [X] resize project title on mobile to be smaller
+
+## Ideas
+
+- [X] recreate the text "decode" effect on "SHARIE RHEA"
+- [ ] add subtle animations (fade or slide in for project cards)
+- [ ] allow filtering projects by technologies (by clicking on them from a card?)
+- [ ] allow switching to light theme
+- [ ] clicking on a technology icon expands it to show its name (toggles)

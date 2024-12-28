@@ -1,0 +1,21 @@
+<nav>
+  <navigation-bar/>
+</nav>
+<header>
+  <h2>Hi there, I'm</h2>
+  <h1>{{ name }}</h1>
+  <p class="subtitle">A computer science student, driven learner, and jack-of-all-trades.</p>
+  <section id="social-links" >
+    <social-button label="GitHub" link="https://github.com/SharieRhea"/>
+    <social-button label="LinkedIn" link="https://www.linkedin.com/in/sharierhea"/>
+  </section>
+</header>
+<main>
+  <project-showcase-card id="home-showcase" [projectKey]="projectKeys[0]"/>
+  <section id="home-project-cards-mobile">
+    <project-card *ngFor="let projectKey of projectKeys" [projectKey]="projectKey"/>
+  </section>
+  <section id="home-project-cards">
+    <project-card *ngFor="let projectKey of projectKeys | slice: 1" [projectKey]="projectKey"/>
+  </section>
+</main>
