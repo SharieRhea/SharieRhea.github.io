@@ -1,9 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ButtonModule } from 'primeng/button';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
-import { Device } from "../device.enum";
 import { ProjectService } from "../project/project.service";
 import { NavigationBar } from "../navigation-bar/navigation-bar.component";
 import { ProjectCard } from "../project/project-card/project-card.component";
@@ -27,28 +25,15 @@ import { SocialIconButton } from "../social/social-icon-button/social-icon-link-
   ],
 })
 export class Home implements OnInit {
-  // used for responsive design
-  Device = Device;
-  device = Device.Default;
   // used to showcase the most recent project and generate cards for the rest
   projectKeys!: string[];
   // the text that is actually displayed
   name = "SHARIE RHEA";
 
-  constructor(private breakpointObserver: BreakpointObserver, private projectService: ProjectService) {}
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
     this.projectKeys = Object.keys(this.projectService.getProjects());
-    this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet]).subscribe(result => {
-      const breakpoints = result.breakpoints;
-
-      if (breakpoints[Breakpoints.HandsetPortrait])
-        this.device = Device.Phone;
-      else if (breakpoints[Breakpoints.TabletPortrait])
-        this.device = Device.Tablet;
-      else
-        this.device = Device.Default;
-    });
 
     // start the decrypt effect on every page load/initialization
     this.decrypt();

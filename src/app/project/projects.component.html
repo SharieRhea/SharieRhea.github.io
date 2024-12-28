@@ -2,7 +2,7 @@
   <navigation-bar/>
 </nav>
 <main>
-  <section [ngClass]="device">
+  <section id="project-cards">
     <project-card *ngFor="let projectKey of projectKeys" [projectKey]="projectKey"/>
   </section>
 </main>

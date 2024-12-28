@@ -1,11 +1,16 @@
 # sharierhea.dev 
 
+Hi there! The site is currently under maintenance, I'm using the space below to keep track of TODOs and necessary updates.
+
 ## TODO
 
+- [ ] check accessibility for pretty much everything
 - [X] refactor ALL breakpoint observers to use the Device enum instead of a boolean
 - [ ] refactor all css to better utilize the main styles.css file
-- [ ] fix image aspect ratios when changing window size
-- [ ] use rem properly
+- [X] fix image aspect ratios when changing window size
+- [X] use rem properly
+  - [X] set the base font size based on the screen's orientation and maybe aspect ratio as well
+  - [X] refactor and get rid of breakpoint observer everywhere
 
 ### Content TODOs
 

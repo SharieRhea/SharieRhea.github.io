@@ -1,19 +1,10 @@
 :host {
-  margin: 2rem;
+  margin: 1.5rem;
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
 }
 
 #description {
-  padding-left: 2rem;
-}
-
-.phone #description {
   padding-left: 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: white;
 }
 
 #container {
@@ -37,26 +28,32 @@ a {
   justify-content: space-between;
 }
 
-i {
-  font-size: 1.5rem;
-}
 
+/* fix size and padding for language buttons */
 ::ng-deep #technologies .technology-icon .p-button {
   height: 3rem;
   width: 3rem;
   padding: 25%;
 }
 
+/* fix size for primeng language icons */
 ::ng-deep #technologies .pi {
   font-size: 1.5rem;
 }
 
-::ng-deep #showcase-link .pi {
-  font-size: 1.25rem;
+/* fix size for normal language icons */
+i {
+  font-size: 1.5rem;
 }
 
+/* fix size and padding for the showcase link */
 ::ng-deep #showcase-link .p-button {
   height: 3rem;
   width: 3rem;
   padding: 0;
+}
+
+/* fix size for showcase arrow icon */
+::ng-deep #showcase-link .pi {
+  font-size: 1.25rem;
 }

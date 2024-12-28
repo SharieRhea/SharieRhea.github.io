@@ -8,16 +8,15 @@ main {
   width: 80%;
 }
 
-.phone .subtitle, .tablet .subtitle {
-  display: none;
-}
-
 #social-links {
   display: flex;
   gap: 1rem;
 }
 
-#desktop-project-cards {
-  display: grid;
+#project-cards-mobile {
+  grid-template-columns: 1fr;
+}
+
+#project-cards {
   grid-template-columns: 1fr 1fr;
 }
