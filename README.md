@@ -2,47 +2,22 @@
 
 Hi there! The site is currently under maintenance, I'm using the space below to keep track of TODOs and necessary updates.
 
-## TODO
+## General TODOs
 
 - [ ] check accessibility for pretty much everything
-- [X] refactor ALL breakpoint observers to use the Device enum instead of a boolean
 - [ ] refactor all css to better utilize the main styles.css file
-- [X] fix image aspect ratios when changing window size
-- [X] use rem properly
-  - [X] set the base font size based on the screen's orientation and maybe aspect ratio as well
-  - [X] refactor and get rid of breakpoint observer everywhere
 
-### Content TODOs
+## Visual TODOs
 
-- [X] allow clicking on a project card to lead to the project's showcase page
-- [X] add project cards to desktop view, 2 side-by-side
-
-- [X] port over all project descriptions 
 - [ ] find images/take screenshots
-
-- [X] make the about page
-
-- [X] fix clicking on project github link goes to project showcase
-
-- [X] implement mobile versions for:
-  - [X] projects
-  - [X] individual project showcase pages
-  - [X] about page
-
-- [X] add technology name to button on project showcase
-
-### Visual TODOs
-
-- [X] fix visuals for home page where all project card text is underlined like a hyperlink
-- [X] fix visuals for projects page (need grid and spacing around edges)
-- [X] fix visuals for project showcase pages (spacing around edges)
-
-- [X] resize project title on mobile to be smaller
+- [ ] allow switching to light theme
 
 ## Ideas
 
-- [X] recreate the text "decode" effect on "SHARIE RHEA"
 - [ ] add subtle animations (fade or slide in for project cards)
 - [ ] allow filtering projects by technologies (by clicking on them from a card?)
-- [ ] allow switching to light theme
 - [ ] clicking on a technology icon expands it to show its name (toggles)
+
+## Deployment
+
+To deploy the site using `angular-cli-ghpages` use `ng deploy`. This will create an auto-generated commit to the `gh-pages` branch. Make sure that build branch for ghpages is set to the `gh-pages` branch!

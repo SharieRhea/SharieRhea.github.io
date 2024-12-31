@@ -17,6 +17,10 @@
   #home-project-cards {
     display: none;
   }
+
+  #showcase-container {
+    flex-direction: column;
+  }
 }
 
 /* Small: large phones, portrait tablets */
@@ -27,6 +31,10 @@
 
   .subtitle, #home-showcase {
     display: none;
+  }
+
+  #showcase-container {
+    flex-direction: column;
   }
 }
 
@@ -51,6 +59,14 @@
 
   #project-cards {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #showcase-container {
+    flex-direction: row;
+  }
+
+  #content-container, #showcase-image {
+    max-width: 50%;
   }
 }
 

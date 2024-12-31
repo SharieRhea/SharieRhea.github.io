@@ -11,10 +11,6 @@ ul {
   gap: 2rem;
 }
 
-#showcase-container.phone {
-  flex-direction: column;
-}
-
 #content-container {
   display: flex;
   flex-direction: column;
@@ -24,11 +20,9 @@ ul {
   left: 1rem;
   right: 1rem;
   bottom: 1rem;
-  max-width: 50%;
 }
 
 img {
-  max-width: 50%;
   object-fit: contain;
   border-radius: .5rem;
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5));
