@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
+
 import { NavigationBar } from "../navigation-bar/navigation-bar.component";
 
 @Component({
-  selector: 'qr-codes',
+  selector: 'faq',
   standalone: true,
-  templateUrl: './qrcodes.component.html',
-  styleUrls: ['./qrcodes.component.css'],
+  templateUrl: './faq.component.html',
+  styleUrls: ['./faq.component.css'],
   imports: [NavigationBar],
 })
-export class QrCodes {}
+export class Faq {}
