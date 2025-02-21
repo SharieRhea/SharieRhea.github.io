@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+
 import { NavigationBar } from "../navigation-bar/navigation-bar.component";
 
 @Component({
