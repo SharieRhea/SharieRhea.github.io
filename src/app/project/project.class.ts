@@ -43,6 +43,21 @@ export const PROJECTS: Record<string, Project> = {
       ["customtkinter", "pi pi-book"]
     ]
   ),
+  "aoc-2024": new Project(
+    "Advent of Code 2024",
+    "https://github.com/SharieRhea/AdventOfCode2024",
+    "images/aoc-2024.png",
+    "25 Christmas-themed 2-part programming puzzles.",
+    "My solutions to Eric Wastl's Advent of Code challenges! In 2024 I chose Rust in order to learn the language. Some problem topics include:",
+    [
+      "data structures: hashmaps, graphs, trees, ...",
+      "recursion, dynamic programming, memoization, ...",
+      "breadth-first search, Karger's, Dijkstra's, ..."
+    ],
+    [
+      ["rust", "devicon-rust-original"]
+    ]
+  ),
   "aoc-2023": new Project(
     "Advent of Code 2023",
     "https://github.com/SharieRhea/AdventOfCode2023",
