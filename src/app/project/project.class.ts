@@ -34,13 +34,13 @@ export const PROJECTS: Record<string, Project> = {
     "A graphical application for editing .mp3 metadata.",
     "Queries Last.fm using an API key to provide automatic fetching of tags, album title and artist, and album cover.",
     [
-      "graphical user interface(GUI) using the customtkinter library",
+      "graphical user interface(GUI) using flet",
       "interacts with last.fm to query track information using their REST API",
       "highly customizable with options for manually entering fields"
     ],
     [
       ["python", "devicon-python-plain"],
-      ["customtkinter", "pi pi-book"]
+      ["flet", "pi pi-book"]
     ]
   ),
   "aoc-2024": new Project(
@@ -56,6 +56,22 @@ export const PROJECTS: Record<string, Project> = {
     ],
     [
       ["rust", "devicon-rust-original"]
+    ]
+  ),
+  "words-without-friends": new Project(
+    "Words Without Friends",
+    "https://github.com/SharieRhea/WordsWithoutFriends",
+    "images/words-without-friends.png",
+    "A word-guessing game where the player must guess words that can be made using only letters from a random \"master\" word.",
+    "The word game may be played in the browser by running the included HTTP server. If the request URL does not end with \"/wordswithoutfriends\" the server will attempt to display the contents of the requested file by name instead.",
+    [
+      "manual http request parsing and response creation",
+      "forked processes to handle simultaneous requests",
+      "basic file server functionality when not in \"game mode\""
+    ],
+    [
+      ["c", "devicon-c-plain"],
+      ["http server", "pi pi-server"]
     ]
   ),
   "aoc-2023": new Project(
